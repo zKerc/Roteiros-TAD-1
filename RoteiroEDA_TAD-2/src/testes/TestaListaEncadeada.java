@@ -31,7 +31,7 @@ public class TestaListaEncadeada {
 		assertEquals("", listaEnc.imprimeEmOrdem());
 		listaEnc.insert(2);
 		assertEquals("2", listaEnc.imprimeEmOrdem());
-		assertArrayEquals(new Integer[2], listaEnc.toArray(Integer.class));
+		assertArrayEquals(new Integer[]{2}, listaEnc.toArray(Integer.class));
 		listaEnc.insert(10);
 		assertEquals("2, 10", listaEnc.imprimeEmOrdem());
 		listaEnc.insert(5);
@@ -119,7 +119,7 @@ public class TestaListaEncadeada {
 	}
 	
 	@Test
-	public void insertRemoverTeste() {
+	public void insertRemoverTeste() throws ListaVaziaException {
 		assertThrows(ListaVaziaException.class, () -> {
 			listaEnc.remove(38);
 		});
@@ -154,7 +154,7 @@ public class TestaListaEncadeada {
 		
 		assertEquals(new NodoListaEncadeada<Integer>(69), listaEnc.remove(69));
 		assertEquals("38", listaEnc.imprimeEmOrdem());
-		assertArrayEquals(new Integer[] {69}, listaEnc.toArray(Integer.class));
+		assertArrayEquals(new Integer[] {38}, listaEnc.toArray(Integer.class));
 		
 		assertEquals(new NodoListaEncadeada<Integer>(38), listaEnc.remove(38));
 		assertEquals("", listaEnc.imprimeEmOrdem());
@@ -164,7 +164,7 @@ public class TestaListaEncadeada {
 		assertThrows(ListaVaziaException.class, () -> {
 			listaEnc.remove(38);
 		});
-	}
+	}	
 	
 	@Test
 	public void sucessorTeste() {
@@ -203,7 +203,7 @@ public class TestaListaEncadeada {
 	}
 	
 	@Test
-	public void isEmptyTest() {
+	public void isEmptyTest() throws ListaVaziaException {
 		assertTrue(listaEnc.isEmpty());
 		listaEnc.insert(206);
 		listaEnc.insert(122);
@@ -225,7 +225,7 @@ public class TestaListaEncadeada {
 	}
 	
 	@Test
-	public void sizeRemoveCabecaTest() {
+	public void sizeRemoveCabecaTest() throws ListaVaziaException {
 		assertEquals(0, listaEnc.size());
 		listaEnc.insert(58);
 		assertEquals(1, listaEnc.size());
@@ -243,6 +243,6 @@ public class TestaListaEncadeada {
 		assertEquals(1, listaEnc.size());
 		listaEnc.remove(43);
 		assertEquals(0, listaEnc.size());
-	}
+	}	
 
 }

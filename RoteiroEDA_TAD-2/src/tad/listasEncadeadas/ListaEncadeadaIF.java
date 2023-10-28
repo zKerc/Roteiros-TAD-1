@@ -7,7 +7,7 @@ public interface ListaEncadeadaIF<T extends Comparable<T>> {
 	public NodoListaEncadeada<T> search(T chave);
 	public void insert(T chave);
 	public void insert(T chave, int index);
-	public NodoListaEncadeada<T> remove(T chave);
+	public NodoListaEncadeada<T> remove(T chave) throws ListaVaziaException;
 	/**
 	 * Existem uma conotação semântica para o imprime em ordem. É para imprimir na ordem em que
 	 * os elementos são inseridos.

@@ -7,8 +7,6 @@ import org.junit.Test;
 import tad.conjuntoDinamico.ConjuntoDinamicoIF;
 import tad.conjuntoDinamico.MeuConjuntoDinamico;
 
-
-
 public class TestaConjuntoDinamico {
 	
 	private ConjuntoDinamicoIF<Integer> cd = null;

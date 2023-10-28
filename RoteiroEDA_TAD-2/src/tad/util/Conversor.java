@@ -8,5 +8,4 @@ public class Conversor<E> {
 	public E[] gerarArray(Class<E> clazz, int capacity) {
 		return (E[])Array.newInstance(clazz, capacity);
 	}
-
 }

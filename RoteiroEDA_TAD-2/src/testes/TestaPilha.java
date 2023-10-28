@@ -12,6 +12,8 @@ import tad.pilha.PilhaCheiaException;
 import tad.pilha.PilhaIF;
 import tad.pilha.PilhaVaziaException;
 
+//implementar equals
+
 public class TestaPilha {
 	
 	protected PilhaIF<Integer> pilha = null;
@@ -140,6 +142,10 @@ public class TestaPilha {
 			pilha.empilhar(3);
 			pilha.empilhar(2);
 			pilha.empilhar(10);
+			pilha.empilhar(5);
+			pilha.empilhar(12);
+			pilha.empilhar(13);
+			pilha.empilhar(21);
 	    });
 	}
 	

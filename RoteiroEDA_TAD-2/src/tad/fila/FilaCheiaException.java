@@ -7,5 +7,8 @@ public class FilaCheiaException extends Exception {
 	public FilaCheiaException() {
 		super("fila cheia");
 	}
-
+	
+	public FilaCheiaException(String message) {
+		super(message);
+	}
 }
